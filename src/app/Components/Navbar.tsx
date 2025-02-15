@@ -1,24 +1,27 @@
-export default function Navbar() {
-    return (
-      <nav className="bg-red-600 text-white p-4 shadow-lg">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">My Website</h1>
-          <ul className="flex space-x-4">
-            <li>
-              <a href="#" className="hover:text-gray-300">Home</a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-300">About</a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-300">Contact</a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-300">Services</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    );
-  }
-  
+import Link from "next/link";
+
+const Navbar = () => {
+  return (
+    <nav className="bg-pink-900 text-white p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <h1 className="text-xl font-bold">My Website</h1>
+        <ul className="flex space-x-6">
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/services">Services</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
